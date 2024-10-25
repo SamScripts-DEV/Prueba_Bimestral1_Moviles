@@ -13,5 +13,47 @@
     </ion-toolbar>
   </ion-header>
 
-  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">a</ion-label>
+          <ion-input type="number" [(ngModel)]="a"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">b</ion-label>
+          <ion-input type="number" [(ngModel)]="b"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">c</ion-label>
+          <ion-input type="number" [(ngModel)]="c"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="block" color="primary" (click)="calcularRaices()">Calcular Raíces</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="resultado">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Resultado</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ resultado }}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
