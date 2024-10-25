@@ -1,17 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Calendario </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Calendario</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <form [formGroup]="dateForm" (ngSubmit)="onSubmit()" class="styled-form">
+    <ion-card>
+      <ion-card-content>
+        <label for="fechaInicio">Fecha Inicial:</label>
+        <input id="fechaInicio" type="date" formControlName="fechaInicio" />
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <label for="fechaFinal">Fecha Final:</label>
+        <input id="fechaFinal" type="date" formControlName="fechaFinal" />
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button type="submit" expand="full" color="primary" shape="round" class="styled-button">
+      Calculate Days
+    </ion-button>
+  </form>
+
+  <ion-card *ngIf="daysDifference !== null" class="result-card">
+    <ion-card-content>
+      <p class="result-text">
+        Diferencia de días: {{ daysDifference }}
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
