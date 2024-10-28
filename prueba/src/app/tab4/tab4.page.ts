@@ -6,15 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['tab4.page.scss']
 })
 export class Tab4Page {
-  a: number = 0;
-  b: number = 0;
-  c: number = 0;
+  a: number | null = null;
+  b: number | null = null;
+  c: number | null = null;
   resultado: string = '';
 
   constructor() {}
 
   calcularRaices() {
     const { a, b, c } = this;
+
+    if (a===null || b === null || c === null){
+      this.resultado = 'Porfavor ingresa todos los coeficientes';
+      return;
+    }
     const discriminante = b * b - 4 * a * c;
     if (discriminante > 0) {
       const sqrtDiscriminante = Math.sqrt(discriminante);
@@ -27,5 +32,9 @@ export class Tab4Page {
     } else {
       this.resultado = 'No hay raíces reales';
     }
+
+    this.a= null;
+    this.b= null;
+    this.c= null;
   }
 }

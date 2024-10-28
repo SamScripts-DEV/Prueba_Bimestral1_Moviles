@@ -1,63 +1,97 @@
 ion-content {
-  --padding-start: 16px;
-  --padding-end: 16px;
-}
-
-ion-item {
-  margin-bottom: 16px;
-}
-
-ion-button {
-  margin-top: 16px;
-}
-ion-content {
-    background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    --padding-start: 16px;
+    --padding-end: 16px;
+    background: linear-gradient(to bottom right, #f3f4f6, #ffffff);
     font-family: 'Roboto', sans-serif;
+    color: #333;
 }
 
 ion-item {
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
     background-color: #ffffff;
+    margin-bottom: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+ion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 ion-button {
-   
     color: #ffffff;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
+    background-color: #007bff;
+    border-radius: 30px;
+    padding: 12px 24px;
     font-size: 16px;
-    transition: background 0.3s ease;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
 }
 
 ion-button:hover {
-    background-color: #007bff;
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
 }
 
 ion-button:active {
-    background-color: #0056b3;
+    background-color: #003d80;
 }
 
 ion-input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
+   
+    border-radius: 8px;
+    padding: 10px;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 8px;
 }
 
 ion-label {
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
+    color: #555;
 }
 
 ion-card {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     background-color: #ffffff;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s ease;
+}
+
+ion-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+ion-chip {
+    background-color: #e9f5ff;
+    color: #007bff;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 500;
+    margin-right: 8px;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+ion-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-fab-button {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+ion-fab-button:hover {
+    background-color: #0056b3;
 }
