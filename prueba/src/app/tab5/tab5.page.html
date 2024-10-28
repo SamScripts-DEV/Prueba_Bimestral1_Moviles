@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Notas
-    </ion-title>
+    <ion-title>Notas</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,10 +13,30 @@
 
   <ion-item>
     <ion-label position="floating">Escribe tu nota</ion-label>
-    <ion-textarea style="height: 100vh;"></ion-textarea>
+    <ion-textarea [(ngModel)]="nota" style="height: 15vh;"></ion-textarea>
   </ion-item>
 
-  <ion-button expand="full" (click)="guardarTexto()" style="margin-top: 10px;">
+  <ion-button expand="full" style="margin-top: 10px;" (click)="guardarNota()">
     Guardar
   </ion-button>
+
+  <ion-button expand="full" style="margin-top: 10px;" (click)="cargarNotas()">
+    Cargar Notas
+  </ion-button>
+
+  <ion-card *ngIf="notasGuardadas.length > 0" class="result-card">
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let nota of notasGuardadas">
+          <ion-label>{{ nota }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="notasGuardadas.length === 0" class="result-card">
+    <ion-card-content>
+      <p>No hay notas guardadas.</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
