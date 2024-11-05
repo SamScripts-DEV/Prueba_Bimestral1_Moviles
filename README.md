@@ -6,6 +6,26 @@ Prueba bimestral, aplicación Ionic
 
 ---
 
+## AppMejorada Icon
+
+Icono personalizable
+
+![imagen](https://github.com/user-attachments/assets/4c2749aa-2be3-4b3b-876f-91a073d31bc3)
+
+
+---
+
+Splash-Screen
+
+
+![imagen](https://github.com/user-attachments/assets/04a1bf7a-4e75-4965-a09e-bb83e3c43616)
+
+
+
+
+
+---
+
 ## 1. Tab 1: Biografía
 
 Pantalla que incluye 15 componentes ionic, bioografía del autor
